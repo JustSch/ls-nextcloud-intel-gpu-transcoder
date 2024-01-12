@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+
+echo "\
+    libva \
+    libva-intel-driver \
+    intel-media-driver \
+    mesa-va-gallium" >> /mod-repo-packages-to-install.list
+
+GID=`stat -c "%g" /dev/dri/renderD128`
+groupadd -g $GID render2 || true 
+GROUP=`getent group $GID | cut -d: -f1`
+usermod -aG $GROUP abc
