@@ -3,7 +3,7 @@ name: Build Image
 on: [push]
 
 env:
-  ENDPOINT: "JustSch/ls-nextcloud-intel-gpu-transcoder"
+  ENDPOINT: "justsch/ls-nextcloud-intel-gpu-transcoder"
   BRANCH: "main"
 
 jobs:
